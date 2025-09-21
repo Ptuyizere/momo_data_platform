@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Transaction",
+  "type": "object",
+  "properties": {
+    "id": { "type": "integer" },
+    "tx_id": { "type": ["string", "null"] },
+    "financial_tx_id": { "type": ["string", "null"] },
+    "external_tx_id": { "type": ["string", "null"] },
+    "amount": { "type": "number" },
+    "currency": { "type": "string" },
+    "transaction_datetime": { "type": "string", "format": "date-time" },
+    "fee": { "type": ["number", "null"] },
+    "balance_after": { "type": ["number", "null"] },
+    "from_user": { "$ref": "Customer" },
+    "to_user": { "$ref": "Customer" },
+    "category": { "$ref": "Transaction_Category" },
+    "from_account": { "type": ["string", "null"] },
+    "to_account": { "type": ["string", "null"] },
+    "raw_body": { "type": "string" },
+    "sms_metadata": {
+      "type": "object",
+      "properties": {
+        "address": { "type": "string" },
+        "service_center": { "type": ["string", "null"] },
+        "protocol": { "type": ["string", "null"] },
+        "status": { "type": ["string", "null"] },
+        "read": { "type": "boolean" },
+        "locked": { "type": "boolean" },
+        "contact_name": { "type": ["string", "null"] }
+      }
+    }
+  },
+  "required": ["id", "amount", "currency", "transaction_datetime"]
+}

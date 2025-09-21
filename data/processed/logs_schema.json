@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "System_Log",
+  "type": "object",
+  "properties": {
+    "log_id": { "type": "integer" },
+    "event_time": { "type": "string", "format": "date-time" },
+    "level": { "type": "string", "enum": ["INFO", "ERROR"] },
+    "source": { "type": "string" },
+    "message": { "type": "string" },
+    "transaction_id": { "type": ["integer", "null"] },
+    "parsed": { "type": "boolean" },
+    "error_details": { "type": ["string", "null"] },
+    "processed_by": { "type": "string" }
+  },
+  "required": ["log_id", "event_time", "level", "message"]
+}

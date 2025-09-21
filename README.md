@@ -40,3 +40,8 @@ JSON endpoints (/transactions, /analytics)
 High-Level System Architecture Diagram: https://drive.google.com/file/d/1IJlZMuli0VDOe9iXFVfhkn5CgBHm4-SW/view?usp=sharing
 
 Project Progress on Trello: https://trello.com/invite/b/68c07705db863a8233f64f3e/ATTId57b9637bb12d7e3676a0ec88f0a46dfF253EFC5/momo-data-platform
+
+## Data organisation and Schemas
+
+The database is designed to store and manage transactions in the mobile money system. The information is extracted from momo sms messages, parsed and validated. The schema is designed around these main entities: Customers, Transactions, Transaction_Categories, and System_Logs.
+

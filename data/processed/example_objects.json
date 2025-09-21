@@ -1,0 +1,65 @@
+{
+  "id": 1,
+  "tx_id": "73214484437",
+  "financial_tx_id": "76662021700",
+  "external_tx_id": "47842929",
+  "amount": 500.00,
+  "currency": "RWF",
+  "transaction_datetime": "2025-09-18 08:30:00",
+  "fee": 10.00,
+  "balance_after": 10590.00,
+  "from_user": {
+    "user_id": 1,
+    "name": "Patrick Tuyizere",
+    "phone_number": "+250780000000",
+    "account_number": "0071001",
+    "role": "sender"
+  },
+  "to_user": {
+    "user_id": 2,
+    "name": "Robert Brown",
+    "phone_number": "+250782222222",
+    "account_number": "0071002",
+    "role": "receiver"
+  },
+  "category": {
+    "category_id": 1,
+    "code": "*182*1*1",
+    "name": "Transfer",
+    "description": "Money transfer",
+    "default_fee": 100.00,
+    "direction": "debit"
+  },
+  "from_account": "0071001",
+  "to_account": "0071002",
+  "raw_body": "SMS: 500 RWF transferred to Robert Brown (250782222222) from Patrick Tuyizere...",
+  "sms_metadata": {
+    "address": "M-Money",
+    "service_center": "+250700000000",
+    "protocol": "0",
+    "status": "1",
+    "read": true,
+    "locked": false,
+    "contact_name": "Unknown"
+  },
+  "logs": [
+    {
+      "log_id": 1,
+      "event_time": "2025-09-18 08:31:00",
+      "level": "INFO",
+      "source": "parser",
+      "message": "Transaction parsed successfully",
+      "parsed": true,
+      "processed_by": "system"
+    },
+    {
+      "log_id": 2,
+      "event_time": "2025-09-18 08:32:00",
+      "level": "INFO",
+      "source": "validator",
+      "message": "Search inputs validated successfully",
+      "parsed": true,
+      "processed_by": "system"
+    }
+  ]
+}
